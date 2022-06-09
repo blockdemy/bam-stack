@@ -1,0 +1,31 @@
+$navbar-height: 48px;
+$content-top-margin: $navbar-height + 32px;
+$menu-width: 240px;
+$menu-width-small: 85px;
+
+.nv-is-full-height {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.nv-is-vertical {
+  display: flex;
+  flex-direction: column;
+}
+
+.nv-is-centered {
+  display: flex;
+  justify-content: center;
+}
+
+.nv-is-spreaded {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.nv-flex-top {
+  display: flex;
+  align-items: flex-start;
+}

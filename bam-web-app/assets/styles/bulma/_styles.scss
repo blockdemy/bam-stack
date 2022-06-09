@@ -1,0 +1,482 @@
+@import '~assets/styles/_screen-sizes';
+
+// We should modify some standard bulma styles, to make its usage easier
+.control .is-active {
+  background-color: $color-button-active;
+}
+
+.button {
+  height: 48px;
+  min-width: 180px;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1.45;
+  padding: 0 30px;
+  border-radius: 24px;
+  border: 1px solid $color-button-default;
+  color: $color-button-default;
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  &:hover,
+  &.is-hovered {
+    border-color: $color-button-hover;
+    color: $color-button-hover;
+  }
+
+  &.is-primary:hover,
+  &.is-primary.is-hovered {
+    background-color: $color-button-hover;
+  }
+
+  &:active,
+  &.is-active {
+    border-color: $color-button-active;
+    color: $color-button-active;
+  }
+
+  &.is-primary:active,
+  &.is-primary.is-active {
+    color: $color-button-text-invert;
+    background-color: $color-button-active;
+  }
+
+  &[disabled] {
+    opacity: 1;
+    border-color: $color-button-disabled;
+    color: $color-button-disabled;
+    pointer-events: none;
+  }
+
+  &.is-primary[disabled] {
+    opacity: 1;
+    background-color: $color-button-disabled;
+    color: $color-button-text-invert;
+    pointer-events: none;
+  }
+
+  &:focus,
+  &:focus:not(:active),
+  &.is-focused {
+    box-shadow: 0px 0px 4px $color-button-focus-shadow;
+    border-color: $color-button-default;
+    color: $color-button-default;
+  }
+
+  &:focus:active,
+  &.is-focused.is-active {
+    box-shadow: 0px 0px 4px $color-button-focus-shadow;
+    border-color: $color-button-active;
+    color: $color-button-active;
+  }
+
+  &:focus:hover,
+  &.is-focused.is-hovered {
+    border-color: $color-button-hover;
+    color: $color-button-hover;
+  }
+
+  &:focus:active,
+  &.is-focused.is-active {
+    border-color: $color-button-active;
+    color: $color-button-active;
+  }
+
+  &.is-text {
+    height: 16px;
+    min-width: auto;
+    border: none;
+    padding: 0;
+    text-decoration: none;
+    color: #002f6c;
+
+    &:focus,
+    &:hover {
+      border-color: transparent;
+      outline: none;
+      box-shadow: none;
+      text-decoration: none;
+      background-color: transparent;
+      color: $color-button-hover;
+    }
+
+    & .icon:last-child:not(:first-child) {
+      margin-left: 9px;
+    }
+
+    &[disabled] {
+      color: $_gray5;
+    }
+  }
+
+  &.is-primary:focus,
+  &.is-primary:focus:not(:active),
+  &.is-primary.is-focused:not(:active) {
+    box-shadow: 0px 0px 4px $color-button-focus-shadow;
+    color: $color-button-text-invert;
+  }
+}
+
+@media (max-width: $mobile-size) {
+  .button-row {
+    .button {
+      min-width: unset;
+      width: 100%;
+      white-space: normal;
+    }
+  }
+}
+
+.chip-select {
+  .input {
+    height: 100%;
+  }
+}
+
+.input,
+.textarea {
+  font-size: 1.2rem;
+  letter-spacing: 0.01em;
+  height: 40px;
+  box-shadow: none;
+  color: $color-input-text;
+  background-color: $color-input-field;
+  border-color: $color-input-field;
+
+  &:hover {
+    border-color: $color-input-field;
+  }
+
+  &:focus {
+    background-color: $color-input-field;
+    border-color: $color-input-form-active-border;
+    box-shadow: none;
+  }
+
+  &::placeholder {
+    color: $color-input-text-form;
+  }
+
+  &[disabled] {
+    &::placeholder {
+      color: $color-input-disabled;
+    }
+  }
+
+  &[type='number'] {
+    &::-webkit-inner-spin-button,
+    ::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+    }
+  }
+
+  &.is-danger {
+    box-shadow: none;
+
+    &:hover {
+      border-color: $color-error;
+    }
+
+    &:focus {
+      border-color: $color-error;
+      box-shadow: none;
+    }
+  }
+}
+
+.is-small {
+  .input {
+    height: 32px;
+  }
+}
+
+.label {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.help {
+  line-height: 1.8;
+  letter-spacing: 0.01em;
+  text-align: left;
+  color: $color-error;
+}
+
+.select {
+  display: inline-block;
+  position: relative;
+  min-width: 192px;
+  outline: none;
+
+  &,
+  &:not(.is-multiple) {
+    height: 40px;
+  }
+
+  select {
+    width: 100%;
+    height: 100%;
+    color: $color-input-text-form;
+    background-color: $color-input-field;
+    border-color: $color-input-field;
+    box-shadow: none;
+    outline: none;
+    font-size: 1.2rem;
+    letter-spacing: 0.01em;
+
+    &[disabled] {
+      background-color: $color-input-field;
+      border-color: $color-input-field;
+
+      &:hover {
+        border-color: $color-input-field;
+      }
+    }
+
+    &:focus {
+      box-shadow: none;
+      outline: none;
+      background-color: $color-input-field;
+      border-color: $color-input-form-active-border;
+
+      &:hover {
+        border-color: $color-input-form-active-border;
+      }
+    }
+
+    &:hover {
+      border-color: $color-input-field;
+    }
+  }
+}
+
+.is-danger {
+  & .select {
+    outline: none;
+    box-shadow: none;
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+}
+
+// label styles shared by TextInput and DatePicker
+.label-large {
+  color: $color-label-large;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.label-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.label:not(:last-child) {
+  margin-bottom: 0px;
+}
+
+.label {
+  margin-bottom: 0px;
+  align-self: flex-end;
+
+  &.required {
+    font-size: 0.9rem;
+  }
+}
+
+$dropdown-font-size: 1rem;
+$dropdown-padding-horizontal: 15px;
+
+.dropdown {
+  vertical-align: unset;
+}
+
+.menu-dropdown {
+  .dropdown {
+    height:48px;
+  }
+}
+
+.dropdown-trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 80px;
+  width: 100%;
+  padding: 5px $dropdown-padding-horizontal;
+  font-size: $dropdown-font-size;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $color-text-strong;
+  line-height: 1rem;
+  cursor: pointer;
+}
+
+.login-dropdown {
+  .profile-menu,
+  .dropdown-trigger {
+    color: $color-header-text;
+  }
+  &:hover {
+    .dropdown-trigger {
+      color: $color-header-text-hover;
+    }
+  }
+}
+.nav-public {
+  .lang-dropdown {
+    .dropdown-trigger {
+      color: $color-header-text;
+    }
+    &:hover {
+      .dropdown-trigger {
+        color: $color-header-text-hover;
+      }
+    }
+  }
+}
+
+.dropdown-menu {
+  width: 100%;
+}
+
+.is-active .dropdown-trigger,
+.dropdown:hover .dropdown-trigger {
+  background-color: $color-dropdown-background;
+}
+
+.dropdown-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 32px;
+  padding-left: $dropdown-padding-horizontal;
+  padding-right: $dropdown-padding-horizontal;
+  border-bottom: solid 1px $color-dropdown-divider;
+  text-transform: none;
+  color: $color-text-strong;
+  font-weight: 600;
+  font-size: $dropdown-font-size;
+  line-height: 1rem;
+  white-space: nowrap;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background: $color-dropdown-background;
+  }
+}
+
+.dropdown-content {
+  padding: 0;
+}
+
+.pagination,
+.nv-table-header,
+#fuel-calc-dropdown {
+  .dropdown-trigger {
+    background: $color-dropdown-background;
+    min-width: 150px;
+    height: 40px;
+    border-radius: 2px;
+  }
+
+  .dropdown-item {
+    color: $color-dropdown-item;
+    height: 40px;
+  }
+
+  .dropdown-item,
+  .dropdown-trigger {
+    font-weight: normal;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    letter-spacing: 0.006;
+    text-transform: capitalize;
+  }
+}
+
+.pagination {
+  .dropdown-trigger {
+    min-width: 75px;
+  }
+}
+
+[is-dark-background].dropdown:hover,
+[is-dark-background].dropdown {
+  .dropdown-trigger,
+  .dropdown-content,
+  .dropdown-item {
+    color: #fff;
+    background-color: transparent;
+    border-bottom: none;
+  }
+
+  .dropdown-content {
+    box-shadow: none;
+  }
+
+  .dropdown-divider {
+    background-color: transparent;
+  }
+}
+
+.columns,
+.column,
+.columns:not(:last-child) {
+  margin: 0;
+  padding: 0;
+}
+
+.tag:not(body) {
+  text-align: center;
+  width: 100%;
+  max-width: 112px;
+  height: 20px;
+  border-radius: 2px;
+  color: $_white;
+
+  &.tag-available,
+  &.tag-READY_FOR_USE {
+    background-color: $tag-color-available;
+  }
+
+  &.tag-available-blue,
+  &.tag-UPCOMING_CONTRACT {
+    background-color: $tag-color-available-blue;
+  }
+
+  &.tag-unavailable,
+  &.tag-IN_SERVICE {
+    background-color: $tag-color-unavailable;
+  }
+
+  &.tag-archived,
+  &.tag-OFFLINE {
+    background-color: $tag-color-archived;
+  }
+}
+
+.box {
+  padding: 40px 50px;
+}
+
+@media (max-width: $mobile-size) {
+  .box {
+    padding: 30px 15px;
+  }
+}
+
+.loader.is-large {
+  width: 50px;
+  height: 50px;
+}

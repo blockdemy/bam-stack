@@ -1,0 +1,43 @@
+@import '~assets/styles/colors';
+.static-page {
+  letter-spacing: 0.1px !important;
+  label.l1 {
+    color: $_gray3;
+  }
+  h3 {
+    margin-top: 4rem;
+    border-bottom: 1px solid $_gray5;
+    padding-bottom: 1rem;
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+  p {
+    strong {
+      font-size: 1.4rem;
+      line-height: 2rem;
+    }
+  }
+  ol,
+  ul,
+  p {
+    margin-bottom: 1.4rem;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    text-align: justify;
+  }
+  ol, ul {
+    list-style-position: inside;
+    &.roman {
+      list-style-type: upper-roman;
+    }
+    &.latin {
+      list-style-type: upper-latin;
+    }
+    li {
+      margin-bottom: 1.4rem;
+    }
+    ol, ul {
+      margin-top: 1.4rem;
+    }
+  }
+}

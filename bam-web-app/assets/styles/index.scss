@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+// Google fonts
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,700,900|Open+Sans:400,600,700,900&display=swap");
+@import "./vue-select/index";
+
+// Global partials
+@import 'colors';
+
+// Bulma configurations
+@import 'bulma/index';
+
+// Additional styles
+@import 'general';
+@import 'text';
+@import './nv/index';
+@import './vuetable';

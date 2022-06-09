@@ -1,0 +1,43 @@
+// Customize Bulma Variables
+// -------------------------
+// Available variables: https://bulma.io/documentation/customize/variables/
+
+$primary: $color-primary;
+$info: $color-info;
+$link: $color-link;
+$background: $color-background;
+$danger: $color-error;
+$success: $_green;
+
+// $success: $green;
+// $warning: $yellow;
+// $dark: $grey-darker;
+
+$text: $color-text;
+$text-strong: $color-text-strong;
+$text-light: $color-text-light;
+
+$body-size: 62.5%;
+$family-sans-serif: "Open Sans", sans-serif;
+$body-font-size: 1.6rem;
+$body-line-height: 1.5;
+
+$radius: 2px;
+$help-size: 1.2rem;
+$label-color: $color-label-disabled;
+$control-padding-vertical: 9px;
+
+// TODO: Confirm
+// $button-color: $text;
+// $button-active-color: $text-strong;
+// $button-active-border-color: $text-light;
+
+$dropdown-content-radius: 0 0 2px 2px;
+$dropdown-divider-background-color: $color-dropdown-divider;
+$dropdown-content-shadow: 0px 2px 6px rgba(0, 0, 0, 0.12);
+$dropdown-content-offset: 0;
+$dropdown-menu-min-width: 80px;
+
+$box-radius: 2px;
+$box-shadow: 0px 4px 12px rgba(60, 82, 110, 0.08);
+$box-padding: 50px 55px;

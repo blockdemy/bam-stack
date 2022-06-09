@@ -1,0 +1,20 @@
+html,
+body {
+  height: 100%;
+  overscroll-behavior: none;
+  background-color: $color-background-bam;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}

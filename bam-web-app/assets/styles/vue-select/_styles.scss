@@ -1,0 +1,103 @@
+@import '../colors';
+
+.v-select {
+  height: 40px;
+  width: 100%;
+  padding: 9px 0px;
+  background: $_gray7;
+  border: none;
+  color: $_gray3;
+  font-size: 1.2rem;
+
+  .vs__dropdown-option+.vs__dropdown-option {
+    border-top: 1px solid $_gray6;
+  }
+
+  .vs__dropdown {
+    &-menu {
+      top: 100%;
+    }
+
+    &-option {
+      padding: 9px 17px;
+      margin-top: 0;
+      font-size: 1.2rem;
+      color: $_gray3;
+
+      &--highlight {
+        color: $_gray3;
+      }
+    }
+  }
+
+  .vs--open {
+    color: $_gray3;
+  }
+
+  .vs__actions {
+    display: none;
+  }
+
+  &.vs--single.vs--open .vs__selected {
+    opacity: 1;
+    padding-top: 1px;
+  }
+}
+
+.chip-select {
+  .v-select {
+    height: 100%;
+    padding: 0 5px;
+
+    .vs__dropdown {
+      &-menu {
+        top: calc(100% + 10px);
+      }
+    }
+  }
+
+  .chev-icon {
+    bottom: 12px;
+    cursor: pointer;
+  }
+}
+
+.v-select:not(.vs--single) {
+  .vs__selected {
+    padding: 4px 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.4;
+    color: $_white;
+    background-color: $_green;
+    border-radius: 2px;
+
+    .vs__deselect {
+      transform: scale(0.7);
+      margin-left: 10px;
+      fill: $_white;
+    }
+  }
+}
+
+.is-small {
+  .v-select {
+    height: 32px;
+    padding: 3px;
+  }
+
+  .v-select .vs__dropdown-menu {
+    top: 21px;
+  }
+
+  .chev-icon {
+    top: 6px;
+  }
+}
+
+.is-to-left {
+  .v-select .vs__dropdown-menu {
+    right: 0 !important;
+    left: auto !important;
+  }
+}
